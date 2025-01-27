@@ -17,8 +17,9 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
   display: none;
+  transform-origin: top center;
+  animation: 1s expand-and-bounce ease;
 }
 
 ul.dropdown-menu li:hover {
@@ -29,4 +30,14 @@ ul.dropdown-menu li:hover {
   display: block;
 }
 
-
+@keyframes expand-and-bounce {
+  from {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
